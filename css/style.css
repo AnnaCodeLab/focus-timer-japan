@@ -1,0 +1,339 @@
+.calender-day {
+  display: block;
+  margin: 120px auto;
+  padding: 20px;
+  width: 1400px;
+  border-radius: 10px;
+  border: 5px solid transparent;
+  background-color: #fff;
+  box-shadow: 0 -15px 20px rgba(255, 255, 255, 0.1), inset 0 -15px 20px rgba(255, 255, 255, 0.1), 0 15px 20px rgba(0, 0, 0, 0.05), inset 0 15px 20px rgba(0, 0, 0, 0 0.5);
+  opacity: 0;
+  transition: all 0.3s;
+  transform: translateY(20px);
+}
+.calender-day .tracking {
+  margin: 0 auto 20px;
+  width: 400px;
+  height: 60px;
+}
+.calender-day .tracking ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  width: 400px;
+  height: 60px;
+}
+.calender-day .tracking ul li {
+  width: 133.33333333px;
+  height: 50px;
+  text-align: center;
+  line-height: 25px;
+  border-right: 1px solid #eee;
+}
+.calender-day .tracking ul li p:first-child {
+  font-size: 18px;
+  font-weight: 500;
+  color: #afb4bd;
+}
+.calender-day .tracking ul li p span {
+  font-size: 16px;
+  margin-right: 4px;
+}
+.calender-day .tracking ul li:last-child {
+  border-right: none;
+}
+.calender-day .content ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-evenly;
+  height: 100%;
+}
+.calender-day .content ul li {
+  width: 200px;
+  height: 190px;
+}
+.calender-day .content ul li h5 {
+  height: 40px;
+  font-size: 20px;
+  font-weight: 400;
+  color: #afb4bd;
+  text-align: center;
+}
+.calender-day .content ul li .month-box {
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+.calender-day .content ul li .month-box .rect {
+  position: relative;
+  display: block;
+  margin: 2px;
+  width: 20px;
+  height: 20px;
+  background-color: #f5f5f5;
+  border-radius: 6px;
+}
+.calender-day .content ul li .month-box .rect .info {
+  position: absolute;
+  top: -30px;
+  left: -50px;
+  width: 130px;
+  height: 25px;
+  background-color: #fff;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 14px;
+  line-height: 25px;
+  color: #afb4bd;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  transform: scale(0);
+  opacity: 0;
+  transition: all 0.3s;
+}
+.calender-day .content ul li .month-box .rect .info i:first-child {
+  margin-right: 3px;
+}
+.calender-day .content ul li .month-box .rect:hover .info {
+  transform: scale(1);
+  opacity: 1;
+}
+.time-count {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  min-height: 100vh;
+  background: url('../assets/dark_bg.jpg') no-repeat 0 0 / cover;
+}
+.time-count .timer {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+.time-count .timer .circle {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 150px;
+}
+.time-count .timer svg {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  transform: rotate(270deg);
+}
+.time-count .timer circle {
+  width: 100%;
+  height: 100%;
+  fill: transparent;
+  stroke-width: 8;
+  stroke: #282828;
+  stroke-linecap: round;
+  transform: translate(5px, 5px);
+}
+.time-count .timer circle:nth-child(2) {
+  stroke: var(--clr);
+  stroke-dasharray: 440;
+  stroke-dashoffset: 440;
+}
+.time-count .timer div {
+  position: absolute;
+  text-align: center;
+  font-weight: 500;
+  color: #fff;
+  font-size: 1.5em;
+}
+.time-count .timer div span {
+  position: absolute;
+  transform: translateX(-50%) translateY(-10px);
+  font-size: 0.35em;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.time-count .timer .dots {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  z-index: 1000;
+}
+.time-count .timer .dots::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  width: 15px;
+  height: 15px;
+  background: var(--clr);
+  border-radius: 50%;
+  box-shadow: 0 0 20px var(--clr), 0 0 60px var(--clr);
+}
+.message {
+  display: none;
+  font-size: 8em;
+  font-weight: 500;
+  text-align: center;
+  color: #fff;
+  line-height: 0.6em;
+}
+.message span {
+  font-size: 0.5em;
+  font-weight: 300;
+}
+.clock {
+  margin: 100px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: url('../assets/output-onlinepngtools-removebg-preview.png') 0 0 / cover;
+  color: #fff;
+}
+.clock::after {
+  content: '';
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background-color: #fff;
+  border-radius: 50%;
+  z-index: 1000;
+}
+.clock .hr,
+.clock .mn,
+.clock .sc {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+}
+.clock .hr {
+  width: 160px;
+  height: 160px;
+}
+.clock .hr::after {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 80px;
+  border-radius: 6px 6px 0 0 ;
+  background-color: #898534;
+  z-index: 10;
+}
+.clock .mn {
+  width: 190px;
+  height: 190px;
+}
+.clock .mn::after {
+  content: '';
+  position: absolute;
+  width: 4px;
+  height: 90px;
+  background-color: #fff;
+  border-radius: 6px 6px 0 0;
+  z-index: 10;
+}
+.clock .sc {
+  width: 230px;
+  height: 230px;
+}
+.clock .sc::after {
+  content: '';
+  position: absolute;
+  width: 2px;
+  height: 150px;
+  background-color: #fff;
+  z-index: 12;
+  border-radius: 6px 6px 0 0 ;
+  z-index: 5;
+}
+.timer {
+  position: relative;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  margin: 100px auto;
+  width: 500px;
+  height: 500px;
+}
+.timer svg {
+  position: relative;
+  width: 500px;
+  height: 500px;
+  transform: rotate(270deg);
+}
+.timer svg circle {
+  width: 100%;
+  height: 100%;
+  fill: transparent;
+  stroke-width: 10;
+  stroke: #282828;
+  stroke-linecap: round;
+  transform: translate(5px);
+}
+.timer svg .tt {
+  stroke: #fff;
+  stroke-dasharray: 1508;
+  stroke-dashoffset: 1508;
+}
+.timer .current-time {
+  position: absolute;
+  left: 105px;
+  font-size: 5em;
+  color: #fff;
+}
+.buttons {
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  width: 340px;
+  height: 40px;
+  font-size: 1.4em;
+  line-height: 40px;
+  text-align: center;
+}
+.buttons a {
+  position: absolute;
+  display: block;
+  width: 120px;
+  height: 40px;
+  color: #eee;
+  border: 1px solid #eee;
+  background-color: #201f1f;
+  border-radius: 20px;
+  transition: all 0.5s;
+}
+.buttons a:first-child {
+  z-index: 1;
+}
+.buttons a:first-child:hover {
+  background-color: #898534;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.5), 0 0 60px rgba(255, 255, 255, 0.2);
+  transform: scale(1.2);
+}
+.buttons a:last-child {
+  transition: all 0.5s;
+}
+.buttons a:last-child:hover {
+  border: 1px solid #898534;
+  color: #898534;
+}
+#canvas1 {
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  width: 2000px;
+  height: 222px;
+}

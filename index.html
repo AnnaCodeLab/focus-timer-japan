@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>focus</title>
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <!-- header -->
+   <header>
+    <h1>
+      <a href="index.html">focus</a>
+    </h1>
+    <nav>
+      <ul>
+        <li><a href="#">タイマー</a></li>
+        <!-- <li><a href="#">トマト勉強法</a></li> -->
+        <li><a href="calender.html">戦績</a></li>
+        <!-- <li><a href="#">コレクション</a></li> -->
+        <!-- <li><a href="#"><i class='bx bx-menu'></i></a></li> -->
+      </ul>
+    </nav>
+   </header>
+  
+  <!-- clock -->
+  <div class="clock">
+    <div class="hr"></div>
+    <div class="mn"></div>
+    <div class="sc"></div>
+  </div>
+
+  <!-- timer -->
+   <div class="timer">
+    <svg>
+      <circle cx="250" cy="250" r="240"></circle>
+      <circle cx="250" cy="250" r="240" class="tt"></circle>
+    </svg>
+    <div class="current-time">00:00:00</div>
+   </div>
+
+  <!-- button -->
+   <div class="buttons">
+    <a href="#" class="start">開始</a>
+    <a href="#" class="stop">終了</a>
+  </div>
+
+  <!-- game -->
+  <canvas id="canvas1"></canvas>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

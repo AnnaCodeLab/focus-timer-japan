@@ -1,0 +1,69 @@
+/* 版心 */
+.wrapper {
+  margin: 0 auto;
+  width: 1300px;
+}
+
+body {
+  overflow: hidden;
+}
+
+/* header */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  /* opacity: 0; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px ;
+  width: 100%;
+  height: 100px;
+  font-size: 1.6em;
+  /* box-shadow: 0 10px 30px rgba(255, 255, 255, 0.7); */
+}
+/* logo */
+header h1 a {
+  display: block;
+  padding-left: 64px;
+  color: #fff;
+  text-shadow: 0 4px 15px rgba(255, 255, 255, 0.8),
+  0 4px 60px rgba(255, 255, 255, 0.7);
+  
+}
+header h1 a::before {
+  content: '';
+  position: absolute;
+  top: 15px;
+  left: 32px;
+  width: 64px;
+  height: 64px;
+  background: url('../assets/char.png')left -198px /512px 576px;
+  animation: animate 800ms steps(8) infinite;
+}
+/* logo animate */
+@keyframes animate {
+  to {
+    background-position-x: -512px;
+  }
+}
+
+/* nav */
+header nav ul {
+  display: flex;
+  align-items: center;
+}
+header nav li a {
+  margin-left: 2em;
+  color: #fff;
+  font-size: 18px;
+  /* text-shadow: 0 4px 15px rgba(255, 255, 255, 0.8), */
+               /* 0 4px 30px rgba(255, 255, 255, 0.5); */
+}
+header li a i {
+  color: #898534;
+  vertical-align: middle;
+  font-size: 2.2em;
+}
+

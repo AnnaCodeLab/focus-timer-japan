@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>focus</title>
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+  <!-- 计时器 -->
+  <div class="time-count">
+    <div class="timer">
+      <div class="circle" style="--clr:#fff">
+        <div class="dots day_dot"></div>
+        <svg>
+          <circle cx="70" cy="70" r="70"></circle>
+          <circle cx="70" cy="70" r="70" id="dd"></circle>
+        </svg>
+        <div class="days">00 <br><span>Day</span></div>
+      </div>
+    
+      <div class="circle" style="--clr:#fff">
+        <div class="dots hr_dot"></div>
+        <svg>
+          <circle cx="70" cy="70" r="70"></circle>
+          <circle cx="70" cy="70" r="70" id="hh"></circle>
+        </svg>
+        <div class="hours">00<br><span>Hour</span></div>
+      </div>
+
+      <div class="circle" style="--clr:#fff">
+        <div class="dots min_dot"></div>
+        <svg>
+          <circle cx="70" cy="70" r="70"></circle>
+          <circle cx="70" cy="70" r="70" id="mm"></circle>
+        </svg>
+        <div class="minutes">00<br><span>Minute</span></div>
+      </div>
+
+      <div class="circle" style="--clr:#fff">
+        <div class="dots sec_dot"></div>
+        <svg>
+          <circle cx="70" cy="70" r="70"></circle>
+          <circle cx="70" cy="70" r="70" id="ss"></circle>
+        </svg>
+        <div class="seconds">00<br><span>Second</span></div>
+      </div>
+    </div>
+  </div>
+  <!-- message -->
+  <h2 class="message">今日の魔力集めは<br><span>12</span>時間</h2>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
